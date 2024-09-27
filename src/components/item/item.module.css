@@ -1,0 +1,13 @@
+.itemContainer {
+  background-color: lightcoral;
+  padding: 15px;
+  border: 2px solid rebeccapurple;
+  border-radius: 8px;
+  width: clamp(190px, 200px, 230px);
+}
+
+@media screen and (max-width: 430px) {
+  .itemContainer {
+    width: 90%;
+  }
+}

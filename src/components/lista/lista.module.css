@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.outerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.valorContainer {
+  font-size: 3rem;
+}
+
+.listaContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  font-size: 1.4rem;
+}
+
+@media (pointer: fine) {
+  .listaContainer > div {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .listaContainer {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+}
