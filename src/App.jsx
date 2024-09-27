@@ -1,5 +1,5 @@
 import Lista from "./components/lista/lista";
-import "./styles.css";
+import "./App.css";
 
 export default function App() {
   return (

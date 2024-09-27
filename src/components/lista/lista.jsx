@@ -52,7 +52,7 @@ export default function Lista() {
       </div>
       <div
         className={styles.valorContainer}
-        style={{ color: themeOption ? "white" : "" }}
+        style={{ color: themeOption ? "white" : "black" }}
       >
         Valor total da compra: R${valorTotalVar}
       </div>
