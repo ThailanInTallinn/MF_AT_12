@@ -1,4 +1,4 @@
-.itemContainer {
+.MuiCard-root {
   background-color: lightcoral;
   padding: 15px;
   border: 2px solid rebeccapurple;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 430px) {
-  .itemContainer {
+  .MuiCard-root {
     width: 90%;
   }
 }

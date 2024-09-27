@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Item from "../item/item";
-import styles from "./lista.module.css";
+import "./lista.css";
+import { Container, Box, Button } from "@mui/material";
 
 export default function Lista() {
   const [themeOption, setThemeOption] = useState(false);
@@ -21,20 +22,22 @@ export default function Lista() {
     },
   ];
   return (
-    <div
-      className={styles.outerContainer}
-      style={{ backgroundColor: themeOption ? "black" : "" }}
+    <Container
+      className="outerContainer"
+      maxWidth="sm"
+      sx={{ bgcolor: themeOption ? "black" : "" }}
     >
-      <div className={styles.headerContainer}>
-        <button
+      <Box className="headerContainer">
+        <Button
+          variant="contained"
           onClick={() => {
             setThemeOption(!themeOption);
           }}
         >
           {themeOption ? "Tema claro" : "Tema escuro"}
-        </button>
-      </div>
-      <div className={styles.listaContainer}>
+        </Button>
+      </Box>
+      <div className="listaContainer">
         {itemsObject.map((item, index) => {
           valorTotalVar += item.quantidade * item.valorUnitario;
           console.log(valorTotalVar);
@@ -51,11 +54,11 @@ export default function Lista() {
         })}
       </div>
       <div
-        className={styles.valorContainer}
+        className="valorContainer"
         style={{ color: themeOption ? "white" : "black" }}
       >
         Valor total da compra: R${valorTotalVar}
       </div>
-    </div>
+    </Container>
   );
 }
